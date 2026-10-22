@@ -9,7 +9,7 @@ export function Home() {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           <section className="w-full flex flex-col items-center justify-center">
             <img src="https://freepngimg.com/thumb/earphone/117117-airpods-download-hd.png#google_vignette" 
-            alt="Logo do produto" 
+            alt="Imagem do produto" 
             className="w-full rounded-lg max-h-70 mb-2"
             />
             <p className="font-medium mt-1 mb-2">AirPods Pro</p>
