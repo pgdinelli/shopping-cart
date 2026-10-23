@@ -6,7 +6,7 @@ export function Cart() {
   const { cart, total, addToCart, removeFromCart } = useContext(CartContext);
 
   return (
-    <div className="bg-cyan-950 text-white h-screen w-full">
+    <div className="text-white w-full">
       <main className="w-full max-w-7xl px-4 py-8 mx-auto">
         <h1 className="font-bold text-2xl mb-4 mt-10 text-center">Carrinho de compras</h1>
 

@@ -34,7 +34,7 @@ export function ProductDetails() {
   }
 
     return (
-        <div className="bg-cyan-950 text-white h-screen w-full">
+        <div className="text-white w-full">
             <main className="w-full max-w-7xl px-4 py-8 mx-auto">
                 {product && (
                     <section key={product.id} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
