@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 export function Cart() {
-  const { cart } = useContext(CartContext);
+  const { cart, total, addToCart, removeFromCart } = useContext(CartContext);
 
   return (
     <div className="bg-cyan-950 text-white h-screen w-full">
@@ -30,24 +30,30 @@ export function Cart() {
               <strong>Preço: R$ {item.price.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })}</strong>
 
               <div className="flex items-center justify-center gap-3">
-                <button className="bg-zinc-900 px-2 rounded font-medium flex items-center justify-center hover:cursor-pointer" title="Remover unidade">
+                <button className="bg-zinc-900 px-2 rounded font-medium flex items-center justify-center hover:cursor-pointer" 
+                title="Remover unidade"
+                onClick={() => removeFromCart(item)}
+                >
                   -
                 </button>
                 <span>{item.amount}</span>
-                <button className="bg-zinc-900 px-2 rounded font-medium flex items-center justify-center hover:cursor-pointer" title="Adicionar unidade">
+                <button className="bg-zinc-900 px-2 rounded font-medium flex items-center justify-center hover:cursor-pointer" 
+                title="Adicionar unidade"
+                onClick={() => addToCart(item)}
+                >
                   +
                 </button>
               </div>
 
               <strong className="float-right">
-                SubTotal: R$ {item.total.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })}
+                SubTotal: {item.total.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })}
               </strong>
             </section>
           ))
         )}
 
         {cart.length !== 0 && (
-          <p className="text-xl font-bold mt-4">Total: R$ 2599.98</p>
+          <p className="text-xl font-bold mt-4">Total: {total}</p>
         )}
       </main>
     </div>
