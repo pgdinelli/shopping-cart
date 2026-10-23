@@ -49,7 +49,8 @@ export function Home() {
               <Link to={`/product/${product.id}`}>
                 <img src={product.cover}
                   alt={product.title}
-                  className="w-full rounded-lg max-h-70 mb-2"
+                  title='Clique para ver detalhes do produto'
+                  className="w-full rounded-lg max-h-70 mb-2 hover:scale-105 transition-transform duration-300"
                 />
               </Link>
               <p className="font-medium mt-1 mb-2">{product.title}</p>
