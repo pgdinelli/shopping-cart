@@ -22,7 +22,7 @@ export function Header() {
                                 <Link to="/cart" className="relative text-white hover:text-cyan-300" title="Carrinho">
                                     <FiShoppingCart size={24} />
                                     {cartAmount > 0 && (
-                                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">{cartAmount}</span>
+                                        <span className="absolute -top-2 left-4 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">{cartAmount}</span>
                                     )}
                                 </Link>
                             </li>
