@@ -19,7 +19,7 @@ export function ProductDetails() {
             console.log(response.data);
         }
         fetchProduct();
-    }, []);
+    }, [id]);
 
     function handleAddToCart(product: ProductProps) {
     toast.success('Produto adicionado ao carrinho!', {
