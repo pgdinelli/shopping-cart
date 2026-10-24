@@ -16,7 +16,6 @@ export function ProductDetails() {
         async function fetchProduct() {
             const response = await api.get(`products/${id}`);
             setProduct(response.data);
-            console.log(response.data);
         }
         fetchProduct();
     }, [id]);
