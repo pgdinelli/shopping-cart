@@ -27,7 +27,7 @@ export function Cart() {
                 className="w-28"
               />
 
-              <strong>Preço: R$ {item.price.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })}</strong>
+              <strong>Preço: {item.price.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })}</strong>
 
               <div className="flex items-center justify-center gap-3">
                 <button className="bg-zinc-900 px-2 rounded font-medium flex items-center justify-center hover:cursor-pointer" 
